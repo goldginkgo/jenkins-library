@@ -4,7 +4,7 @@ def SonarScan(projectName,projectDesc,projectPath){
     // sonarScanner安装地址
     def sonarHome = "/opt/sonar-scanner"
     // sonarqube服务端地址
-    def sonarServer = "http://sonarqube-sonarqube.sonarqube.svc.cluster.local:9000/"
+    def sonarServer = "http://sonarqube-sonarqube.gitops-system.svc.cluster.local:9000/"
     // 以时间戳为版本
     def scanTime = sh returnStdout: true, script: 'date +%Y%m%d%H%m%S'
     scanTime = scanTime - "\n"

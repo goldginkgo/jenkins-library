@@ -3,7 +3,7 @@ package org.devops.v1
 // 封装HTTP请求
 def HttpReq(requestType,requestUrl,requestBody){
     // 定义sonar api接口
-    def sonarServer = "http://sonarqube-sonarqube.sonarqube.svc.cluster.local:9000/api"
+    def sonarServer = "http://sonarqube-sonarqube.gitops-system.svc.cluster.local:9000/api"
     result = httpRequest authentication: 'sonar-admin-user',
             httpMode: requestType,
             contentType: "APPLICATION_JSON",
